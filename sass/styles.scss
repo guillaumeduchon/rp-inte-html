@@ -3,6 +3,7 @@
 // BASE
 @import "knacss/knacss.scss";
 @import "import/_variables.scss";
+html, body {overflow-x: hidden;}
 
 // STRUCTURE
 @import "import/_header.scss";
@@ -11,6 +12,7 @@
 @import "import/_typo.scss";
 @import "import/_player.scss";
 @import "import/_forms.scss";
+@import "import/_menu.scss";
 
 // WRAPPER
 .wrapper {

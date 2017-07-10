@@ -10,5 +10,6 @@ $gris-clair: #9E9E9E;
 $bleu: #0DC7D8;
 
 // GRIDS
+.grid-rp-1 {@include grid(1, 0);}
 .grid-rp-2 {@include grid(2, 3rem);}
 .grid-rp-3 {@include grid(3, 3rem);}

@@ -1,9 +1,9 @@
 header {
+    position: fixed;
     background: $bg-head;
     padding: 20px 0;
     border-bottom: 10px solid $bleu;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    position: fixed;
     width: 100%;
     .logo {
         display: inline-block;
