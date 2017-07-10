@@ -9,3 +9,13 @@
 @import "import/_footer.scss";
 @import "import/_boxes.scss";
 @import "import/_typo.scss";
+@import "import/_player.scss";
+@import "import/_forms.scss";
+
+// WRAPPER
+.wrapper {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+header {
+    background: $bg-head;
+    padding: 20px 0;
+    border-bottom: 10px solid $bleu;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    .logo {
+        display: inline-block;
+        width: 130px;
+        margin: 0 20px;
+        img {vertical-align: middle;}
+    }
+
+    nav.second {
+        display: inline-block;
+        vertical-align: middle;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                padding: 0 20px 0 0;
+                font-size: 2.2rem;
+                a {text-decoration: none;}
+            }
+        }
+    }
+}
