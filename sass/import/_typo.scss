@@ -1,0 +1,24 @@
+h2.title {
+    font-weight: 300;
+    line-height: 4.8rem;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 2px;
+        width: 40px;
+        margin-right: 20px;
+        background: $brand-primary;
+    }
+    &.podcast {
+        &::before {background: $violet;}
+    }
+    &.article {
+        &::before {background: $red;}
+    }
+    &.social {
+        &::before {background: $green;}
+    }
+}
+
+aside h2:before {width: 30px;}

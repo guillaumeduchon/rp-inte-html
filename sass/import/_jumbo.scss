@@ -1,0 +1,44 @@
+.jumbo {
+    margin: 112px 0 40px;
+    position: relative;
+    background: $brand-primary;
+    .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: -webkit-linear-gradient(left, #0DC7D8 0%, rgba(12,198,215,0.00) 100%);
+            background: -moz-linear-gradient(left, #0DC7D8 0%, rgba(12,198,215,0.00) 100%);
+            background: -o-linear-gradient(left, #0DC7D8 0%, rgba(12,198,215,0.00) 100%);
+            background: linear-gradient(to right, #0DC7D8 0%, rgba(12,198,215,0.00) 100%);
+            width: 100%;
+            &.home {width: 50%;}
+            height: 100%;
+            z-index: 1;
+    }
+
+    .live {
+        position: relative;
+        z-index: 2;
+        color: $white;
+        width: 25%;
+        padding: 100px 0;
+        h1 {
+            margin: 0;
+            font-family: $anton;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 5.5rem;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $white;
+        }
+        p {
+            margin: 0;
+            &:first-of-type {padding-top: 15px;}
+            &:last-of-type {padding-bottom: 15px;}
+            &.music {
+                font-size: 1.9rem;
+                .artist {font-weight: 600;}
+            }
+        }
+    }
+}

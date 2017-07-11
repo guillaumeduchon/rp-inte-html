@@ -1,8 +1,9 @@
 header {
     position: fixed;
+    z-index: 3;
     background: $bg-head;
     padding: 20px 0;
-    border-bottom: 10px solid $bleu;
+    border-bottom: 10px solid $brand-primary;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     width: 100%;
     .logo {
@@ -12,12 +13,22 @@ header {
         img {vertical-align: middle;}
     }
 
+    .search {
+        float: right;
+        height: 62px;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        padding: 15px 0;
+    }
+
     nav.second {
+        @media (max-width:$small) {display: none;}
         display: inline-block;
         vertical-align: middle;
         ul {
             list-style-type: none;
             padding: 0;
+            font-size: 0;
             li {
                 display: inline-block;
                 padding: 0 20px 0 0;
