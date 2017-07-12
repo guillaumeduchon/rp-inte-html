@@ -7,6 +7,7 @@ $anton: 'Anton', sans-serif;
 $bg-head: #fff;
 $gray: #252525;
 $light-gray: #9E9E9E;
+$semi-gray: #5B5B5B;
 $blue: #0DC7D8;
 $white: #fff;
 $violet: #994DD1;
@@ -17,5 +18,9 @@ $green: #32D994;
 .grid-rp-1 {@include grid(1, 0);}
 .grid-rp-2 {@include grid(2, 3rem);}
 .grid-rp-3 {@include grid(3, 3rem);}
+
+@media (max-width: $small) {
+    .grid-rp-3, .grid-rp-2 {@include grid(1, 3rem);}
+}
 
 // MIXINS
