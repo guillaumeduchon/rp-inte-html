@@ -1,26 +1,44 @@
 .nav-inner {
    position: absolute;
+   display: inline-block;
    width: 320px;
    height: 100vh;
+   padding: 0 20px;
+   left: 0;
    top: 85px;  
    transform: translateX(-1500px) translateZ(0);
-   transition: transform .2s;
+   transition: transform .3s;
    will-change: transform;
    background: rgba($gray, 0.8);
    color: $white;
-   &:before {
-     content: "";
-     display: inline-block;
-     position: absolute;
-     left:-1000px;
-     width: 1000px;
-     height: 100vh;
-     background: rgba($gray, 0.8);
-   }
+   overflow-y: scroll;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 7px 0 0 0;
+      li {
+        display: block;
+        font-size: 2rem;
+        padding: 7px 0;
+        vertical-align: middle;
+        font-weight: 300;
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 2px;
+          width: 20px;
+          margin-right: 10px;
+          vertical-align: middle;
+          background: $white;
+        }
+        a {color: $white;}
+      }
+    }
   }
   /* here's goes the slide effect */
   input:checked ~ .nav-inner {
     transform: translateX(0);
+    left: 0;
   }
 
   .nav-button {

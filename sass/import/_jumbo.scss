@@ -1,5 +1,5 @@
 .jumbo {
-    margin: 85px 0 40px;
+    margin: 85px 0 0;
     position: relative;
     background: $brand-primary;
     .gradient {
@@ -21,7 +21,7 @@
         z-index: 2;
         color: $white;
         width: 25%;
-        padding: 100px 0;
+        padding: 100px 0 120px;
         h1 {
             margin: 0;
             font-family: $anton;

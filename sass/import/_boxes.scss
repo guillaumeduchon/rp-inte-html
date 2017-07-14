@@ -45,7 +45,18 @@
             }   
         }
     }
-    &.social {border-color: $green;}
+    &.social {
+        border-color: $green;
+        text-align: center;
+        padding: 10px;
+        a {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+            padding: 0 15px;
+            vertical-align: middle;
+            img {width: 27px; vertical-align: top; padding-top: 3px;}
+        }
+    }
 
     .box-image {
         width: 100%;
