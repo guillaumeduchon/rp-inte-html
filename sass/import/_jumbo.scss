@@ -22,6 +22,29 @@
         color: $white;
         width: 25%;
         padding: 100px 0 120px;
+        &.show {
+            width: 100%;
+            padding: 50px 0 70px;
+            h1 {
+                border: 0;
+                padding-bottom: 0;
+                &::after {
+                    content: "";
+                    display: block;
+                    margin-top: 15px;
+                    height: 1px;
+                    background: $white;
+                    width: 25%;
+                }
+            }
+            p {
+                font-size: 1.9rem;
+                a.anim {
+                    color: $white;
+                    font-weight: 600;
+                }
+            }
+        }
         h1 {
             margin: 0;
             font-family: $anton;
