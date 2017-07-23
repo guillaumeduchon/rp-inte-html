@@ -42,7 +42,7 @@ footer {
                     content: none;
                 }
             }
-            a {color: $white;}
+            a {color: $white; &:hover {text-decoration: underline;}}
         }
     }
     p {

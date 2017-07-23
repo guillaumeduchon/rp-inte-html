@@ -9,15 +9,17 @@
             font-size: 2rem;
             vertical-align: middle;
             padding: 1px 10px;
+            transition: 0.2s all;
             &.previous, &.next {
                 font-size: 2.5rem;
                 line-height: 3.5rem;
             }
             &.previous {margin-right: 20px;}
             &.next {margin-left: 20px;}
-            &.active {
+            &.active, &:hover {
                 font-weight: 600;
                 background: $light-gray;
+                transition: 0.2s all;
             }
         }
     }

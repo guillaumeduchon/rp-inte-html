@@ -44,6 +44,7 @@
                 line-height: 2.6rem;
                 margin: 0; padding: 0;
                 margin-bottom: 5px;
+                &:hover {text-decoration: underline;}
             }
             p.time {
                 margin: 0;
@@ -54,6 +55,7 @@
             h4.descr {
                 padding-top: 5px;
                 font-size: 1.6rem;
+                &:hover {text-decoration: underline;}
             }
         }
     }
@@ -146,6 +148,7 @@
             padding-bottom: 10px;
             text-transform: uppercase;
             &.show {font-weight: 600;}
+            &:hover {text-decoration: underline;}
         }
         h3.show-name {
             font-size: 1.8rem;
@@ -154,16 +157,19 @@
             padding-bottom: 10px;
             text-transform: uppercase;
             font-weight: 600;
+            &:hover {text-decoration: underline;}
         }
         h4.title {
             font-size: 1.8rem;
             color: $gray;
             line-height: 2.3rem;
+            &:hover {text-decoration: underline;}
         }
         h4.descr {
             font-size: 1.6rem;
             color: $gray;
             line-height: 2.1rem;
+            &:hover {text-decoration: underline;}
         }
         p.link {
             margin: 0;
@@ -203,6 +209,7 @@
                 font-size: 1.8rem;
                 line-height: 2.3rem;
                 padding-bottom: 5px;
+                &:hover {text-decoration: underline;}
             }
             h3.artist {
                 color: $brand-primary;
@@ -210,11 +217,13 @@
                 line-height: 2.5rem;
                 padding-bottom: 0;
                 text-transform: uppercase;
+                &:hover {text-decoration: underline;}
             }
             h4.song {
                 color: $brand-primary;
                 font-size: 1.8rem;
                 line-height: 2.5rem;
+                &:hover {text-decoration: underline;}
             }
         }
     }
@@ -224,5 +233,59 @@
     .box-image {
         img {height: 203px;}
         .icon {font-size: 5rem; line-height: 5rem;}
+    }
+}
+
+.article-contain {
+    background: $white;
+    position: relative;
+    border-bottom: 5px solid $brand-primary;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    .img-cover {
+        position: relative;
+        width: 100%;
+        img {padding:0;vertical-align: bottom;}
+        .copy {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding: 5px 20px;
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+            &::before {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                background: $red;
+                width: 10px;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        padding: 20px 20px 0;
+        &:last-child {padding: 20px;}
+    }
+    .video {
+        padding: 20px 20px 0;
+        &:last-child {padding: 20px;}
+        max-width: 100%;
+        position: relative;
+        .videobox {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }

@@ -21,7 +21,7 @@
         font-size: 2rem;
         padding: 7px 0;
         vertical-align: middle;
-        font-weight: 300;
+        font-weight: 400;
         &::before {
           content: "";
           display: inline-block;
@@ -31,7 +31,7 @@
           vertical-align: middle;
           background: $white;
         }
-        a {color: $white;}
+        a {color: $white; &:hover {text-decoration: underline;}}
       }
     }
   }

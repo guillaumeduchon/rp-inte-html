@@ -22,9 +22,8 @@
         color: $white;
         width: 25%;
         padding: 100px 0 120px;
-        &.show {
+        &.show, &.article {
             width: 100%;
-            padding: 50px 0 70px;
             h1 {
                 border: 0;
                 padding-bottom: 0;
@@ -37,11 +36,29 @@
                     width: 25%;
                 }
             }
+        }
+        &.show {
+            padding: 50px 0 70px;
             p {
                 font-size: 1.9rem;
                 a.anim {
                     color: $white;
                     font-weight: 600;
+                    &:hover {text-decoration: underline;}
+                }
+            }
+        }
+        &.article {
+            padding: 70px 0 90px;
+            h1 {line-height: 6.5rem; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
+            p {
+                padding-top: 15px;
+                .author {
+                    img {width: 50px; border-radius: 100%; margin-right: 10px;}
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    color: $white;
+                    &:hover {text-decoration: underline;}
                 }
             }
         }
