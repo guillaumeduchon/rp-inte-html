@@ -43,6 +43,28 @@ a.button {
     }
 }
 
+.button-podcast {
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid $violet;
+    padding: 6px 10px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $violet;
+    margin-bottom: 20px;
+    &:hover {
+        transition: all 0.2s;
+        background: $violet;
+        color: $background-base;
+    }
+    .icon {
+        padding-right: 5px;
+    }
+}
+
 .button-share {
     display: inline-block;
     border-radius: 5px;
@@ -54,12 +76,13 @@ a.button {
     font-weight: 600;
     font-size: 2.7rem;
     color: $brand-primary;
+    margin-bottom: 20px;
     &.fb {
         border-color: $facebook;
         color: $facebook;
         &:hover {
             transition: all 0.2sec;
-            color: $white;
+            color: $background-base;
             background: $facebook;
         }
     }
@@ -68,7 +91,7 @@ a.button {
         color: $twitter;
         &:hover {
             transition: all 0.2sec;
-            color: $white;
+            color: $background-base;
             background: $twitter;
         }
     }
@@ -77,7 +100,7 @@ a.button {
         color: $fmess;
         &:hover {
             transition: all 0.2sec;
-            color: $white;
+            color: $background-base;
             background: $fmess;
         }
     }
