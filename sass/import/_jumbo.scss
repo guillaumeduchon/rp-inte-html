@@ -22,7 +22,7 @@
         color: $white;
         width: 25%;
         padding: 100px 0 120px;
-        &.show, &.article, &.basic {
+        &.show, &.article, &.basic, &.podcast {
             width: 100%;
             h1 {
                 border: 0;
@@ -41,9 +41,23 @@
             padding: 50px 0 70px;
             p {
                 font-size: 1.9rem;
-                a.anim {
+                .anim {
                     color: $white;
                     font-weight: 600;
+                    &:hover {text-decoration: underline;}
+                }
+            }
+        }
+        &.podcast {
+            padding: 50px 0 70px;
+            h1 {line-height: 6.5rem; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
+            p {
+                padding-top: 15px;
+                .anim {
+                    font-size: 1.8rem;
+                    color: $white;
+                    img {width: 50px; border-radius: 100%; margin-right: 10px;}
+                    .name {font-weight: 600;}
                     &:hover {text-decoration: underline;}
                 }
             }

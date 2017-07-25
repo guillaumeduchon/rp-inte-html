@@ -56,3 +56,29 @@
 nav > input {
   display: none; /* hidden on large screens */
 }
+
+.ink {
+  background: $white;
+  display: block;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    li {
+      display: inline-block;
+      font-size: 2.2rem;
+      width: 33.33%;
+      text-align: center;
+      padding: 5px 0;
+      margin: 0;
+      transition: 0.2s all;
+      border-bottom: 5px solid transparent;
+      vertical-align: middle;
+      &:hover {border-bottom: 5px solid $light-gray; transition: 0.2s all;}
+      &.active {border-bottom: 5px solid $brand-primary;}
+    }
+  }
+}

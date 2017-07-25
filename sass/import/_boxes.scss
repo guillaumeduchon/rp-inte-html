@@ -241,6 +241,35 @@
     position: relative;
     border-bottom: 5px solid $brand-primary;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    .pod-play {
+        padding: 20px;
+        border-bottom: 5px solid $brand-primary;
+        .play-infos, .play-butt {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .play-infos {
+            margin-right: 40px;
+            .icon {
+                color: $brand-primary;
+                font-size: 6rem;
+                line-height: 6rem;
+            }
+            p {
+                color: $brand-primary;
+                font-size: 1.6rem;
+                padding: 2px 0 0 0;
+            }
+        }
+        .play-butt {
+            text-align: right;
+            .button-podcast {
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+        }
+    }
     .img-cover {
         position: relative;
         width: 100%;
@@ -257,7 +286,7 @@
                 content: "";
                 display: inline-block;
                 height: 1px;
-                background: $red;
+                background: $brand-primary;
                 width: 10px;
                 vertical-align: middle;
                 margin-right: 5px;

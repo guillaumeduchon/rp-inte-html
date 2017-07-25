@@ -33,6 +33,7 @@ aside h2:before {width: 30px;}
         margin: 0;
         border-bottom: 5px solid $brand-primary;
         &::before {content: none;}
+        &.pod {border: none; padding: 20px 20px 0;}
     }
 
     p {
