@@ -1,60 +1,70 @@
-.nav-inner {
-   position: absolute;
-   display: inline-block;
-   width: 320px;
-   height: 100vh;
-   padding: 0 20px;
-   left: 0;
-   top: 85px;  
-   transform: translateX(-1500px) translateZ(0);
-   transition: transform .3s;
-   will-change: transform;
-   background: rgba($gray, 0.8);
-   color: $white;
-   overflow-y: scroll;
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 7px 0 0 0;
-      li {
-        display: block;
-        font-size: 2rem;
-        padding: 7px 0;
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  background: $gray;
+  ul {
+    list-style-type: none;
+    font-size: 0;
+    margin: 7px 0 0 0;
+    li {
+      display: block;
+      font-size: 2rem;
+      padding: 7px 10px;
+      vertical-align: middle;
+      font-weight: 400;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        background: $white;
+        width: 20px;
+        margin-right: 10px;
         vertical-align: middle;
-        font-weight: 400;
-        &::before {
-          content: "";
-          display: inline-block;
-          height: 2px;
-          width: 20px;
-          margin-right: 10px;
-          vertical-align: middle;
-          background: $white;
+      }
+      a {
+        color: $white;
+        &:hover {text-decoration: underline;}
+      }
+      ul {
+        margin: 0 0 5px 0;
+        li {
+          display: block;
+          font-size: 1.5rem;
+          padding: 4px 0 4px 30px;
+          font-weight: 500;
+          &::before {
+            width: 15px;
+          }
         }
-        a {color: $white; &:hover {text-decoration: underline;}}
       }
     }
-  }
-  /* here's goes the slide effect */
-  input:checked ~ .nav-inner {
-    transform: translateX(0);
-    left: 0;
-  }
+  }    
+}
 
-  .nav-button {
-    display: inline-block;
-    font-size: 2.7rem;
-    vertical-align: middle;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-  }
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: $background-base;
+  min-height: 100vh;
+}
 
-nav > input {
-  display: none; /* hidden on large screens */
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
 }
 
 .ink {
