@@ -24,10 +24,20 @@
         content: "";
         display: inline-block;
         height: 2px;
-        background: $white;
+        background: $brand-primary;
         width: 20px;
         margin-right: 10px;
         vertical-align: middle;
+      }
+      &.show {
+        &::before {
+          background: $violet;
+        }
+      }
+      &.article {
+        &::before {
+          background: $red;
+        }
       }
       a {
         color: $white;
@@ -42,6 +52,7 @@
           font-weight: 500;
           &::before {
             width: 15px;
+            background: $light-gray;
           }
         }
       }

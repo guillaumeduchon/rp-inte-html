@@ -35,15 +35,17 @@
             font-weight: 600;
             margin: 0;
             padding: 0;
+            a:hover {text-decoration: underline;}
         }
         h4.show {
             font-size: 1.4rem;
             line-height: 1.7rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: $light-gray;
             margin: 0;
+            color: $light-gray;
             padding: 0;
+            a {color: $light-gray; &:hover {text-decoration: underline;}}
             .live-no {color: $brand-primary;}
         }
     }

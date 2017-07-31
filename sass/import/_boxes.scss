@@ -236,6 +236,17 @@
     }
 }
 
+.box.big {
+    .box-image {
+        img {height: 420px;}
+        .icon {font-size: 5rem; line-height: 5rem;}
+    }
+    .box-info {
+        h3.category {font-size: 2rem; line-height: 2.5rem;}
+        h4.title {font-size: 2.5rem; line-height: 3rem;}
+    }
+}
+
 .article-contain {
     background: $white;
     position: relative;
