@@ -13,11 +13,50 @@
         <nav id="menu" role="navigation">
             <ul>
                 <li><a href="">Accueil</a></li>
-                <li><a href="">Émissions</a></li>
-                <li><a href="">Animateurs</a></li>
-                <li><a href="">Musique</a></li>
-                <li><a href="">Infos</a></li>
-                <li><a href="">L'association radiorp.fr</a></li>
+                <li class="show"><a href="">Émissions</a>
+                    <ul>
+                        <li><a href="">Électrons Libres</a></li>
+                        <li><a href="">Allô Loulou</a></li>
+                        <li><a href="">La sélection de JET</a></li>
+                        <li><a href="">Sacha sur RP</a></li>
+                        <li><a href="">La semaine américaine</a></li>
+                        <li><a href="">Grille des programmes</a></li>
+                    </ul>
+                </li>
+                <li class="show"><a href="">Animateurs</a>
+                    <ul>
+                        <li><a href="">Gaspard DELARUELLE</a></li>
+                        <li><a href="">Louis BAKTASH</a></li>
+                        <li><a href="">JET</a></li>
+                        <li><a href="">Sacha COHEN</a></li>
+                        <li><a href="">Manon REVEL</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Musique</a>
+                    <ul>
+                        <li><a href="">Infos</a></li>
+                        <li><a href="">Le Music Club</a></li>
+                        <li><a href="">Titres diffusées</a></li>
+                        <li><a href="">Soumettre un titre dans la programmation</a></li>
+                    </ul>
+                </li>
+                <li class="article"><a href="">Infos</a>
+                    <ul>
+                        <li><a href="">Cinéma/Séries TV</a></li>
+                        <li><a href="">Expos/Sorties</a></li>
+                        <li><a href="">Insolite</a></li>
+                        <li><a href="">Musique</a></li>
+                        <li><a href="">Sport</a></li>
+                    </ul>
+                </li>
+                <li><a href="">L'association radiorp.fr</a>
+                    <ul>
+                        <li><a href="">L'actualité de la radio</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Partenaires</a></li>
+                        <li><a href="">Publicité</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         
@@ -53,8 +92,8 @@
                     <div class="image"><img src="img/player/cover.jpg" alt=""></div>
                     <a class="button-live" href=""><i class="fa fa-play-circle" aria-hidden="true"></i></a>
                     <div class="infos">
-                        <h4 class="show"><span class="live-no">En direct</span> : 19h / 21h - Sacha sur radiorp.fr</h4>
-                        <h3 class="title">Eugénie - Puis Dance</h3>
+                        <h4 class="show"><span class="live-no">En direct</span> : <a href="">19h / 21h - Sacha sur radiorp.fr</a></h4>
+                        <h3 class="title"><a href="">Eugénie - Puis Dance</a></h3>
                     </div>
                     <div class="audiofil"></div>
                 </section>
@@ -352,6 +391,18 @@
 
         slideout.on('close', function () {
         fixed.style.transition = '';
+        });
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="js/scrolltofixed.js"></script>
+        <script type="text/javascript">
+        var playerFixed = $('#player');
+        playerFixed.each(function(i) {
+            playerFixed.scrollToFixed({
+                marginTop: 125,
+                zIndex: 100
+            });
         });
         </script>
 
