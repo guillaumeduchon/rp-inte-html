@@ -370,9 +370,8 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script type="text/javascript" src="js/scrolltofixed.js"></script>
         <script type="text/javascript">
-        var playerFixed = $('#player');
-        playerFixed.each(function(i) {
-            playerFixed.scrollToFixed({
+        $(document).ready(function() {
+            $('#player').scrollToFixed( {
                 marginTop: 125,
                 zIndex: 100
             });
