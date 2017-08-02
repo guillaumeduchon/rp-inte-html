@@ -255,13 +255,13 @@
     .pod-play {
         padding: 20px;
         border-bottom: 5px solid $brand-primary;
+        display: flex;
+        align-items: center;
         .play-infos, .play-butt {
-            display: inline-block;
-            vertical-align: middle;
+            flex: 1 1 auto;
             text-align: center;
         }
         .play-infos {
-            margin-right: 40px;
             .icon {
                 color: $brand-primary;
                 font-size: 6rem;
@@ -274,7 +274,6 @@
             }
         }
         .play-butt {
-            text-align: right;
             .button-podcast {
                 margin-right: 10px;
                 margin-bottom: 0;
@@ -283,8 +282,15 @@
     }
     .img-cover {
         position: relative;
-        width: 100%;
+        max-width: 100%;
         img {padding:0;vertical-align: bottom;}
+        &.videoshow {border-bottom: 5px solid $brand-primary;}
+        .videobox {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
         .copy {
             position: absolute;
             bottom: 0px;
