@@ -59,6 +59,44 @@
             }
         }
     }
+    &.schedule {
+        display: flex;
+        overflow: hidden;
+        .box-image, .box-info {width: 50%;}
+        .box-image {
+            img {
+                height: 100%;
+            }
+        }
+        .box-info {
+            padding: 20px;
+            p.time {
+                font-size: 1.6rem;
+                color: $semi-gray;
+                margin-bottom: 5px;
+                .icon {padding-right: 5px;}
+            }
+            h3.title {
+                font-size: 2.2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                line-height: 2.8rem;
+                margin: 0; padding: 0;
+                margin-bottom: 5px;
+                &:hover {text-decoration: underline;}
+            }
+            h4.anim {
+                font-size: 1.6rem;
+                font-weight: 600;
+                &:hover {text-decoration: underline;}
+            }
+            h4.descr {
+                padding-top: 5px;
+                font-size: 1.6rem;
+                &:hover {text-decoration: underline;}
+            }
+        }
+    }
     &.text {
         padding: 10px;
         &.about {font-size: 1.8rem;}
