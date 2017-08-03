@@ -73,9 +73,18 @@
                         <li><a href="">Infos</a></li>
                     </ul>
                 </nav>
-                <a href="" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <button class="search" id="modalBtnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </header>
+
+        <div id="modalSearch" class="modal">
+            <div class="modal-content">
+                <span class="close"><i class="fa fa-close" aria-hidden="true"></i></span>
+                <h2 class="title">Votre recherche</h2>
+                <input type="text">
+                <input type="submit" value="Rechercher">
+            </div>
+        </div>
 
         <div id="panel">
             <section class="jumbo" style="background:url('img/cover-home.jpg') no-repeat center; background-size:cover;">
@@ -500,53 +509,38 @@
             </footer>
         </div>
 
-        <script src="js/slideout.js"></script>
-        <script>
-        var slideout = new Slideout({
-            'panel': document.getElementById('panel'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70
-        });
-
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-            slideout.toggle();
-        });
-
-        var fixed = document.querySelector('.fixed-header');
-
-        slideout.on('translate', function(translated) {
-        fixed.style.transform = 'translateX(' + translated + 'px)';
-        });
-
-        slideout.on('beforeopen', function () {
-        fixed.style.transition = 'transform 300ms ease';
-        fixed.style.transform = 'translateX(256px)';
-        });
-
-        slideout.on('beforeclose', function () {
-        fixed.style.transition = 'transform 300ms ease';
-        fixed.style.transform = 'translateX(0px)';
-        });
-
-        slideout.on('open', function () {
-        fixed.style.transition = '';
-        });
-
-        slideout.on('close', function () {
-        fixed.style.transition = '';
-        });
-        </script>
-
+        <script type="text/javascript" src="js/slideout.js"></script>
+        <script type="text/javascript" src="js/slideout-settings.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script type="text/javascript" src="js/scrolltofixed.js"></script>
-        <script type="text/javascript">
-        $(document).ready(function() {
-            $('#player').scrollToFixed( {
-                marginTop: 125,
-                zIndex: 100
-            });
-        });
+        <script type="text/javascript" src="js/scrolltofixed-settings.js"></script>
+
+        <script>
+        // Get the modal
+        var modal = document.getElementById('modalSearch');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("modalBtnSearch");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
         </script>
     </body>
 </html>

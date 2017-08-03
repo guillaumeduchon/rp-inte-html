@@ -1,5 +1,5 @@
 .jumbo {
-    margin: 85px 0 0;
+    margin: 84px 0 0;
     position: relative;
     background: $brand-primary;
     .gradient {
@@ -34,6 +34,28 @@
                     height: 1px;
                     background: $white;
                     width: 25%;
+                }
+            }
+            ol.breadcrumb {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                font-size: 0;
+                li {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    a {color: $white; &:hover {text-decoration: underline;}}
+                    &::before {
+                        content: "/";
+                        display: inline-block;
+                        margin: 0 10px;
+                        font-weight: 500;
+                    }
+                    &:first-child {&::before {display: none;}}
                 }
             }
         }

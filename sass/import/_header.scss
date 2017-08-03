@@ -28,8 +28,12 @@ header {
     .search {
         float: right;
         font-size: 2.7rem;
-        line-height: 2.8rem;
+        line-height: 2.7rem;
         padding: 10px 0;
+        border: 0;
+        margin: 0;
+        background: none;
+        cursor: pointer;
     }
     nav.second {
         @media (max-width:$small) {display: none;}
@@ -47,4 +51,78 @@ header {
             }
         }
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 102;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.2s;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 120px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 1140px;
+    transition: all 0.2s;
+    border-bottom: 5px solid $brand-primary;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    h2 {margin-top: 0;}
+    input[type=text] {
+        border: 0;
+        border-bottom: 2px solid $brand-primary;
+        width: 100%;
+        padding: 10px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        background: #f7f7f7;
+    }
+    input[type=submit] {
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid $brand-primary;
+            padding: 6px 10px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            font-size: 2.2rem;
+            background: none;
+            color: $brand-primary;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.2s;
+                background: $brand-primary;
+                color: $white;
+            }
+    }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    transition: all 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    transition: all 0.2s;
+    text-decoration: none;
+    cursor: pointer;
 }
