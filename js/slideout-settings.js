@@ -1,7 +1,7 @@
 var slideout = new Slideout({
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
-            'padding': 256,
+            'padding': 320,
             'tolerance': 70
         });
 
@@ -17,7 +17,7 @@ var slideout = new Slideout({
 
         slideout.on('beforeopen', function () {
         fixed.style.transition = 'transform 300ms ease';
-        fixed.style.transform = 'translateX(256px)';
+        fixed.style.transform = 'translateX(320px)';
         });
 
         slideout.on('beforeclose', function () {
