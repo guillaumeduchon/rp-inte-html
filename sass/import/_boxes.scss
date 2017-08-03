@@ -50,7 +50,8 @@
                 margin: 0;
                 font-size: 1.4rem;
                 color: $semi-gray;
-                .icon {padding-right: 5px;}
+                .icon {padding-right: 5px; vertical-align: middle;}
+                vertical-align: middle;
             }
             h4.descr {
                 padding-top: 5px;

@@ -1,0 +1,47 @@
+form {
+    fieldset {
+        padding: 20px;
+        label {
+            vertical-align: middle;
+            display: block;
+            margin: 0 0 2px 0;
+        }
+        input[type=text], input[type=email] {
+            border: 0;
+            border-bottom: 2px solid $brand-primary;
+            width: 100%;
+            padding: 5px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: #f7f7f7;
+        }
+        textarea {
+            border: 0;
+            border-bottom: 2px solid $brand-primary;
+            width: 100%;
+            padding: 5px;
+            margin: 0;
+            margin-bottom: 20px;
+            background: #f7f7f7;
+        }
+        input[type=submit] {
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid $brand-primary;
+            padding: 6px 10px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.8rem;
+            background: none;
+            color: $brand-primary;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.2s;
+                background: $brand-primary;
+                color: $white;
+            }
+        }
+    }
+}
