@@ -23,7 +23,6 @@
             margin: 0 20px;
         }
     }
-
     .text-asso {
         text-align: center;
         font-size: 1.8rem;
@@ -33,7 +32,6 @@
             &:first-child {margin-top: 0;}
         }
     }
-
     .img-asso {
         overflow: hidden;
         position: relative;
@@ -42,6 +40,16 @@
             height: 100%;
             border: 0;
             object-fit: cover;
+        }
+    }
+
+    .grid-m-a {
+        padding: 20px;
+        .member-asso {
+            text-align: center;
+            img {width: 100%; max-width: 200px; border-radius: 100%; margin: 0 auto;}
+            h3.name-member {font-weight: 500; font-size: 2.1rem; margin: 20px 0 0;}
+            h4.descr-member {font-family: 500; font-size: 1.7rem; margin: 0 0 20px;}
         }
     }
 }

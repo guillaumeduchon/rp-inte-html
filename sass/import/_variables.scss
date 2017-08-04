@@ -21,9 +21,10 @@ $fmess: #0084ff;
 .grid-rp-1 {@include grid(1, 0);}
 .grid-rp-2 {@include grid(2, 3rem);}
 .grid-rp-3 {@include grid(3, 3rem);}
+.grid-rp-4 {@include grid(4, 3rem);}
 
 @media (max-width: $small) {
-    .grid-rp-3, .grid-rp-2 {@include grid(1, 3rem);}
+    .grid-rp-4, .grid-rp-3, .grid-rp-2 {@include grid(1, 3rem);}
 }
 
 // MIXINS
