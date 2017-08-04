@@ -6,7 +6,11 @@ var slideout = new Slideout({
         });
 
         document.querySelector('.toggle-button').addEventListener('click', function() {
-            slideout.toggle();
+            slideout.open();
+        });
+
+        document.querySelector('.toggle-close').addEventListener('click', function() {
+            slideout.close();
         });
 
         var fixed = document.querySelector('.fixed-header');
