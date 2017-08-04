@@ -11,6 +11,10 @@
 
     <body>
         <nav id="menu" role="navigation">
+            <div class="menu-header">
+                <img src="img/logo_white.svg" alt="">
+                <span class="toggle-close"><i class="fa fa-close" aria-hidden="true"></i></span>
+            </div>
             <ul>
                 <li><a href="">Accueil</a></li>
                 <li class="show"><a href="">Émissions</a>
@@ -73,9 +77,18 @@
                         <li><a href="">Infos</a></li>
                     </ul>
                 </nav>
-                <a href="" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <button class="search" id="modalBtnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </header>
+
+        <div id="modalSearch" class="modal">
+            <div class="modal-content">
+                <span class="closeModal"><i class="fa fa-close" aria-hidden="true"></i></span>
+                <h2 class="title">Votre recherche</h2>
+                <input type="text">
+                <input type="submit" value="Rechercher">
+            </div>
+        </div>
 
         <div id="panel">
             <section class="jumbo">
@@ -428,55 +441,11 @@
             </footer>
         </div>
 
-        <script src="js/slideout.js"></script>
-        <script>
-        var slideout = new Slideout({
-            'panel': document.getElementById('panel'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70
-        });
-
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-            slideout.toggle();
-        });
-
-        var fixed = document.querySelector('.fixed-header');
-
-        slideout.on('translate', function(translated) {
-        fixed.style.transform = 'translateX(' + translated + 'px)';
-        });
-
-        slideout.on('beforeopen', function () {
-        fixed.style.transition = 'transform 300ms ease';
-        fixed.style.transform = 'translateX(256px)';
-        });
-
-        slideout.on('beforeclose', function () {
-        fixed.style.transition = 'transform 300ms ease';
-        fixed.style.transform = 'translateX(0px)';
-        });
-
-        slideout.on('open', function () {
-        fixed.style.transition = '';
-        });
-
-        slideout.on('close', function () {
-        fixed.style.transition = '';
-        });
-        </script>
-
+        <script type="text/javascript" src="js/slideout.js"></script>
+        <script type="text/javascript" src="js/slideout-settings.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script type="text/javascript" src="js/scrolltofixed.js"></script>
-        <script type="text/javascript">
-        var playerFixed = $('#player');
-        playerFixed.each(function(i) {
-            playerFixed.scrollToFixed({
-                marginTop: 125,
-                zIndex: 100
-            });
-        });
-        </script>
-
+        <script type="text/javascript" src="js/scrolltofixed-settings.js"></script>
+        <script type="text/javascript" src="js/modal-search.js"></script>
     </body>
 </html>
