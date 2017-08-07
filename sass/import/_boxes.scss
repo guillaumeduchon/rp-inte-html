@@ -346,7 +346,7 @@
             bottom: 0px;
             left: 0px;
             padding: 5px 20px;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.85);
             font-size: 1.1rem;
             line-height: 1.6rem;
             &::before {
@@ -360,10 +360,29 @@
             }
         }
     }
-    img {
+    .wp-caption {
+        img, .wp-caption-text img[class*="wp-image-"] {width: 100%; padding: 20px 20px 0; &:last-child {padding: 20px 20px 0;}}
+        &:last-child {padding-bottom: 20px;}
+    }
+    img, .wp-caption-text img[class*="wp-image-"] {
         width: 100%;
         padding: 20px 20px 0;
         &:last-child {padding: 20px;}
+    }
+    .wp-caption-text {
+        padding: 5px 20px 0;
+        &:last-child {padding: 5px 20px 0;}
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+            &::before {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                background: $brand-primary;
+                width: 10px;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
     }
     .video {
         padding: 20px 20px 0;
