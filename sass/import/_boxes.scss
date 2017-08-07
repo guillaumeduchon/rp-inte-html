@@ -60,7 +60,7 @@
             }
         }
     }
-    &.schedule {
+    &.schedule, &.title-music {
         display: flex;
         overflow: hidden;
         .box-image, .box-info {width: 50%;}
@@ -97,6 +97,9 @@
                 &:hover {text-decoration: underline;}
             }
         }
+    }
+    &.title-music {
+
     }
     &.text {
         padding: 10px;
@@ -189,7 +192,7 @@
             &.show {font-weight: 600;}
             &:hover {text-decoration: underline;}
         }
-        h3.show-name, h3.date-archiv {
+        h3.show-name, h3.date-archiv, h3.prog-name {
             font-size: 1.8rem;
             line-height: 2.3rem;
             color: $semi-gray;
@@ -198,6 +201,7 @@
             font-weight: 600;
             &:hover {text-decoration: underline;}
         }
+        h3.prog-name {padding: 0;}
         h3.date-archiv {
             padding: 0;
             text-align: center;
@@ -250,7 +254,7 @@
             p.time {padding-bottom: 10px;}
             p.link {padding-top: 15px;}
         }
-        &.show, &.music {
+        &.show, &.music, &.title-music {
             padding: 10px;
             p.time {color:$semi-gray;}
             h3 {font-weight: 600;}
@@ -276,6 +280,7 @@
                 &:hover {text-decoration: underline;}
             }
         }
+        &.title-music {padding: 20px; p.link {padding-top: 15px;}}
     }
 }
 
@@ -333,7 +338,7 @@
     .img-cover {
         position: relative;
         max-width: 100%;
-        img {padding:0;vertical-align: bottom;}
+        img {padding:0;vertical-align: bottom; &:last-child {padding: 0;}}
         &.videoshow {border-bottom: 5px solid $brand-primary;}
         .videobox {
             position: relative;
