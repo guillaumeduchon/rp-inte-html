@@ -24,12 +24,15 @@
         @media (min-width: $medium) and (max-width: $large) {width: 35%;}
         @media (min-width: $small) and (max-width: $medium) {width: 50%;}
         @media (max-width: $small) {width: 100%;}
+        @media (max-width: $tiny) {padding: 50px 0 90px;}
         padding: 100px 0 120px;
         &.show, &.article, &.basic, &.podcast, &.anim, &.asso {
             width: 100%;
             h1 {
                 border: 0;
                 padding-bottom: 0;
+                @media (max-width: $tiny) {font-size: 4rem;}
+                @media (max-width: $max-tiny) {font-size: 3.5rem;}
                 &::after {
                     width: 25%;
                 }
@@ -70,7 +73,7 @@
         }
         &.podcast {
             padding: 50px 0 70px;
-            h1 {line-height: 6.5rem; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
+            h1 {line-height: 6.5rem; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); @media (max-width: $tiny) {line-height: 5.5rem;} @media (max-width: $max-tiny) {line-height: 5rem;}}
             p {
                 padding-top: 15px;
                 .anim {
@@ -88,7 +91,7 @@
         }
         &.article {
             padding: 70px 0 90px;
-            h1 {line-height: 6.5rem; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
+            h1 {line-height: 6.5rem; @media (max-width: $tiny) {line-height: 5.5rem;} @media (max-width: $max-tiny) {line-height: 5rem;} text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);}
             p {
                 padding-top: 15px;
                 .author {
