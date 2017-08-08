@@ -98,9 +98,6 @@
             }
         }
     }
-    &.title-music {
-
-    }
     &.text {
         padding: 10px;
         &.about {font-size: 1.8rem;}
@@ -108,26 +105,12 @@
     &.podcast {
         border-color: $violet;
         overflow: hidden;
-        .box-image {
-            max-height: 100%;
-            img {
-                height: 203px;
-                max-height: 100%;
-            }   
-        }
         p.descr {
             padding: 10px;
         }
     }
     &.music {
         border-color: $brand-primary;
-        .box-image {
-            max-height: 100%;
-            img {
-                height: 203px;
-                max-height: 100%;
-            }   
-        }
     }
     &.social {
         border-color: $green;
@@ -284,7 +267,7 @@
     }
 }
 
-.grid-rp-2 .box {
+.grid-rp-2 .box, .grid-rp-1 .box {
     .box-image {
         img {height: 203px;}
         .icon {font-size: 5rem; line-height: 5rem;}

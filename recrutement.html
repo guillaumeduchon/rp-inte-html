@@ -174,9 +174,12 @@
                                         <option>Community Manager</option>
                                     </select>
 
-                                    <label for="cp">Maquette*</label>
-                                    <label for="cp" class="label-file"><i class="fa fa-upload icon" aria-hidden="true"></i>Choisir votre fichier</label>
-                                    <input class="input-file" type="file" name="cp" id="cp" />
+                                    <label>Maquette*</label>
+                                    <div class="input-file-container">
+                                        <input type="file" class="input-file" id="file">
+                                        <label for="file" class="input-file-trigger" tabindex="0"><i class="fa fa-upload icon" aria-hidden="true"></i>Choisir votre fichier</label>
+                                    </div>
+                                    <p class="file-return"></p>
 
                                     <label for="message">Message*</label>
                                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -328,5 +331,6 @@
         <script type="text/javascript" src="js/scrolltofixed.js"></script>
         <script type="text/javascript" src="js/scrolltofixed-settings.js"></script>
         <script type="text/javascript" src="js/modal-search.js"></script>
+        <script type="text/javascript" src="js/upload-style.js"></script>
     </body>
 </html>

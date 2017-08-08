@@ -41,6 +41,13 @@ a.button {
         background: $brand-primary;
         color: $background-base;
     }
+    .icon {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            vertical-align: middle;
+            padding-right: 7px;
+            font-weight: normal;
+        }
 }
 
 .button-podcast {

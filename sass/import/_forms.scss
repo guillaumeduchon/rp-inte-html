@@ -28,32 +28,6 @@ form {
                 padding: 0;
             }
         }
-        .label-file {
-            display: inline-block;
-            border-radius: 5px;
-            border: 2px solid $brand-primary;
-            padding: 6px 10px;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.6rem;
-            color: $brand-primary;
-            background: $white;
-            margin-bottom: 15px;
-            cursor: pointer;
-            .icon {
-                padding-right: 5px;
-            }
-            &:hover {
-                transition: all 0.2s;
-                background: $brand-primary;
-                color: $white;
-            }
-        }
-        .input-file {
-            display: none;
-        }
         textarea {
             border: 0;
             border-bottom: 2px solid $brand-primary;
@@ -84,3 +58,60 @@ form {
         }
     }
 }
+
+.input-file-container {
+        position: relative;
+        margin-bottom: 20px;
+        }
+        .js .input-file-trigger {
+        display: inline-block;
+            border-radius: 5px;
+            border: 2px solid $brand-primary;
+            padding: 6px 10px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.8rem;
+            background: none;
+            color: $brand-primary;
+            cursor: pointer;
+            .icon {
+                padding-right: 5px;
+            }
+        }
+        .js .input-file {
+        position: absolute;
+        top: 0; left: 0;
+        width: 225px;
+        padding: 6px 10px;
+        opacity: 0;
+        cursor: pointer;
+        }
+        .js .input-file:hover + .input-file-trigger,
+        .js .input-file:focus + .input-file-trigger,
+        .js .input-file-trigger:hover,
+        .js .input-file-trigger:focus {
+        transition: all 0.2s;
+                background: $brand-primary;
+                color: $white;
+        }
+        p.file-return {padding: 0;}
+        p.file-return:not(:empty) {
+            padding: 0 0 20px;
+        }
+        .file-return {
+        margin: 0;
+        }
+        .file-return:not(:empty) {
+        margin: 0;
+        }
+        .js .file-return {
+        font-style: italic;
+        font-size: 1.4rem;
+        }
+        .js .file-return:not(:empty):before {
+        content: "Fichier choisi : ";
+        font-style: normal;
+        font-weight: normal;
+        }

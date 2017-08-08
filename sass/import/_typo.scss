@@ -98,6 +98,8 @@ aside h2:before {width: 30px;}
         font-size: 2.1rem;
     }
 
+    ul, ol {margin-top: 20px; padding: 0 20px 0 40px; font-size: 1.7rem;}
+
     blockquote {
         &::before {
             content: none;
