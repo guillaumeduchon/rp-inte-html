@@ -31,3 +31,7 @@ a {text-decoration: none;}
 .maj {text-transform: uppercase;}
 
 .pub {margin: 20px 0 0;}
+
+@media (max-width: $medium) {
+    .two-thirds {margin-bottom: 3.3rem;}
+}

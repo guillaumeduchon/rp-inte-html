@@ -24,6 +24,53 @@
         cursor: pointer;
     }
   }
+  .search-header {
+    @media (min-width: $small) {display: none;}
+    padding: 17px 20px 3px;
+    h4.title {
+      color: $white;
+      font-weight: 400;
+      vertical-align: middle;
+      margin: 0 0 5px;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        background: $brand-primary;
+        width: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+    input[type=text] {
+        border: 0;
+        border-bottom: 2px solid $brand-primary;
+        width: 100%;
+        padding: 5px;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        background: #f7f7f7;
+    }
+    input[type=submit] {
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid $brand-primary;
+            padding: 6px 10px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.6rem;
+            background: none;
+            color: $brand-primary;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.2s;
+                background: $brand-primary;
+                color: $white;
+            }
+    }
+  }
   ul {
     list-style-type: none;
     font-size: 0;

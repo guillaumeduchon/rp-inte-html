@@ -133,6 +133,11 @@
             width: 100%;
             max-height: 100%;
             height: 130px;
+            @media (min-width: $medium) and (max-width: $large) {height: 100px;}
+            @media (min-width: $small) and (max-width: $medium) {height: 120px;}
+            @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+            @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+            @media (max-width: $max-tiny) {height: 145px;}
             border: 0;
             object-fit: cover;
             transition: all 0.5s;
@@ -268,20 +273,62 @@
 }
 
 .grid-rp-2 .box, .grid-rp-1 .box {
+    .icon {
+            font-size: 5rem; line-height: 5rem;
+            @media (max-width: $large) {font-size: 3.5rem;line-height: 3.5rem;}
+        }
+}
+
+.grid-rp-1 .box {
     .box-image {
-        img {height: 203px;}
-        .icon {font-size: 5rem; line-height: 5rem;}
+        img {
+            height: 203px;
+            @media (min-width: $medium) and (max-width: $large) {height: 155px;}
+            @media (min-width: $small) and (max-width: $medium) {height: 380px;}
+            @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+            @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+            @media (max-width: $max-tiny) {height: 145px;}
+        }
+    }
+}
+
+.grid-rp-2 .box {
+    .box-image {
+        img {
+            height: 203px;
+            @media (min-width: $medium) and (max-width: $large) {height: 165px;}
+            @media (min-width: $small) and (max-width: $medium) {height: 190px;}
+            @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+            @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+            @media (max-width: $max-tiny) {height: 145px;}
+        }
     }
 }
 
 .box.big {
     .box-image {
-        img {height: 420px;}
-        .icon {font-size: 5rem; line-height: 5rem;}
+        img {
+            height: 420px;
+            @media (min-width: $medium) and (max-width: $large) {height: 350px;}
+            @media (min-width: $small) and (max-width: $medium) {height: 380px;}
+            @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+            @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+            @media (max-width: $max-tiny) {height: 145px;}
+        }
+        .icon {
+            font-size: 5rem; line-height: 5rem;
+            @media (max-width: $small) {font-size: 3.5rem;line-height: 3.5rem;}
+        }
     }
     .box-info {
-        h3.category {font-size: 2rem; line-height: 2.5rem;}
-        h4.title {font-size: 2.5rem; line-height: 3rem;}
+        h3.category {
+            font-size: 2rem; line-height: 2.5rem;
+            @media (max-width: $small) {font-size: 1.6rem; line-height: 2.1rem;}
+        }
+        h4.title {
+            font-size: 2.5rem; line-height: 3rem;
+            @media (max-width: $small) {font-size: 1.8rem; line-height: 2.3rem;}
+        }
     }
 }
 

@@ -21,6 +21,9 @@
         z-index: 2;
         color: $white;
         width: 25%;
+        @media (min-width: $medium) and (max-width: $large) {width: 35%;}
+        @media (min-width: $small) and (max-width: $medium) {width: 50%;}
+        @media (max-width: $small) {width: 100%;}
         padding: 100px 0 120px;
         &.show, &.article, &.basic, &.podcast, &.anim, &.asso {
             width: 100%;
@@ -28,11 +31,6 @@
                 border: 0;
                 padding-bottom: 0;
                 &::after {
-                    content: "";
-                    display: block;
-                    margin-top: 15px;
-                    height: 1px;
-                    background: $white;
                     width: 25%;
                 }
             }
@@ -115,8 +113,15 @@
             font-weight: normal;
             text-transform: uppercase;
             line-height: 5.5rem;
-            padding-bottom: 15px;
-            border-bottom: 1px solid $white;
+            &::after {
+                    content: "";
+                    display: block;
+                    margin-top: 15px;
+                    height: 1px;
+                    background: $white;
+                    width: 75%;
+                    @media (max-width: $small) {max-width: 35%;}
+            }
         }
         p {
             margin: 0;
