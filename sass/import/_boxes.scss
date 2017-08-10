@@ -355,6 +355,7 @@
         border-bottom: 5px solid $brand-primary;
         display: flex;
         align-items: center;
+        @media (max-width: $tiny) {flex-wrap: wrap;}
         .play-infos, .play-butt {
             flex: 1 1 auto;
             text-align: center;
@@ -375,6 +376,7 @@
             .button-podcast {
                 margin-right: 10px;
                 margin-bottom: 0;
+                @media (max-width: $small) {margin: 5px;}
             }
         }
     }
@@ -442,6 +444,10 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+        }
+        .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+            width: 100% !important;
+            height: 1 !important;
         }
     }
     iframe, object, embed {
