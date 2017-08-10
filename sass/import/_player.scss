@@ -23,6 +23,7 @@
         display: inline-block;
         font-size: 4.5rem;
         line-height: 4.5rem;
+        @media (max-width: $tiny) {font-size: 3.5rem; line-height: 3.5rem; margin: 0 0 0 10px;}
         color: $brand-primary;
         margin: 0 10px 0 20px;
         vertical-align: middle;
@@ -35,6 +36,7 @@
         h3.title {
             font-size: 2rem;
             line-height: 2.5rem;
+            @media (max-width: $tiny) {font-size: 1.6rem; line-height: 1.9rem;}
             font-weight: 600;
             margin: 0;
             padding: 0;
@@ -43,6 +45,7 @@
         h4.show {
             font-size: 1.4rem;
             line-height: 1.7rem;
+            @media (max-width: $tiny) {font-size: 1.2rem; line-height: 1.5rem;}
             font-weight: 600;
             text-transform: uppercase;
             margin: 0;

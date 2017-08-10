@@ -1,6 +1,11 @@
 form {
     fieldset {
         padding: 20px;
+        @media (max-width: $tiny) {padding: 10px;}
+        &.title-music {
+            select {width: 33.33%;margin-right: 10px; display: inline-block; margin-bottom: 0; @media (max-width:$small) {width: 100%; margin:0 0 20px;}}
+            input {vertical-align: middle;}
+        }
         label {
             vertical-align: middle;
             display: block;
@@ -73,6 +78,7 @@ form {
             text-align: center;
             font-weight: 600;
             font-size: 1.8rem;
+            @media (max-width: $tiny) {font-size: 1.6rem;}
             background: none;
             color: $brand-primary;
             cursor: pointer;

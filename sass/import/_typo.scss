@@ -1,6 +1,7 @@
 h2.title {
     font-weight: 300;
     line-height: 4.8rem;
+    @media (max-width: $tiny) {line-height: 4.3rem;}
     margin-bottom: 2rem;
     &:before {
         content: "";
@@ -10,6 +11,7 @@ h2.title {
         width: 40px;
         margin-right: 20px;
         background: $brand-primary;
+        @media (max-width: $tiny) {width: 20px; margin-right: 10px;}
     }
     &.podcast {
         &::before {background: $violet;}
@@ -29,6 +31,7 @@ aside h2:before {width: 30px;}
         font-weight: 600;
         font-size: 2rem;
         line-height: 2.7rem;
+        @media (max-width: $tiny) {font-size: 1.8rem; line-height: 2.5rem;}
         padding: 20px;
         margin: 0;
         border-bottom: 5px solid $brand-primary;
@@ -38,6 +41,7 @@ aside h2:before {width: 30px;}
 
     p {
         font-size: 1.7rem;
+        @media (max-width: $tiny) {font-size: 1.6rem;}
         a {
             color: $semi-gray;
             &:hover {text-decoration: underline;}
@@ -68,6 +72,7 @@ aside h2:before {width: 30px;}
             width: 40px;
             margin-right: 20px;
             background: $brand-primary;
+            @media (max-width: $tiny) {width: 20px; margin-right: 10px;}
         }
     }
 
@@ -81,24 +86,30 @@ aside h2:before {width: 30px;}
 
     h1 {
         font-size: 4rem;
+        @media (max-width: $tiny) {font-size: 3.5rem;}
     }
     h2 {
         font-size: 3.5rem;
+        @media (max-width: $tiny) {font-size: 3rem;}
     }
     h3 {
         font-size: 3rem;
+        @media (max-width: $tiny) {font-size: 2.5rem;}
     }
     h4 {
         font-size: 2.7rem;
+        @media (max-width: $tiny) {font-size: 2.2rem;}
     }
     h5 {
         font-size: 2.4rem;
+        @media (max-width: $tiny) {font-size: 1.9rem;}
     }
     h6 {
         font-size: 2.1rem;
+        @media (max-width: $tiny) {font-size: 1.8rem;}
     }
 
-    ul, ol {margin-top: 20px; padding: 0 20px 0 40px; font-size: 1.7rem;}
+    ul, ol {margin-top: 20px; padding: 0 20px 0 40px; font-size: 1.7rem; @media (max-width: $tiny) {font-size: 1.6rem;}}
 
     blockquote {
         &::before {

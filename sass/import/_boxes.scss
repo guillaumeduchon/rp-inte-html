@@ -10,7 +10,9 @@
         text-align: center;
         color: $white;
         .box-image {
-            img {height:300px;}
+            img {height:300px; @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+            @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+            @media (max-width: $max-tiny) {height: 145px;}}
         }
         .box-info {
             h3.show {
@@ -24,16 +26,14 @@
             h4.time {font-size: 2rem;}
         }
     }
-    &.category {
+    &.category, &.schedule, &.title-music {
         display: flex;
-        max-height: 208px;
+        @media (max-width: $small) {flex-wrap: wrap;}
         overflow: hidden;
-        .box-image, .box-info {width: 50%;}
+        .box-image, .box-info {width: 50%; @media (max-width: $small) {width: 100%;}}
         .box-image {
-            height: 203px;
             img {
                 width: 100%;
-                height: 100%;
             }
         }
         .box-info {
@@ -61,14 +61,6 @@
         }
     }
     &.schedule, &.title-music {
-        display: flex;
-        overflow: hidden;
-        .box-image, .box-info {width: 50%;}
-        .box-image {
-            img {
-                height: 100%;
-            }
-        }
         .box-info {
             padding: 20px;
             p.time {
@@ -120,6 +112,7 @@
             font-size: 3.5rem;
             line-height: 3.5rem;
             padding: 0 15px;
+            @media (max-width: $max-tiny) {padding: 0 10px;}
             vertical-align: middle;
             img {width: 27px; vertical-align: top; padding-top: 3px;}
         }
@@ -272,14 +265,20 @@
     }
 }
 
-.grid-rp-2 .box, .grid-rp-1 .box {
-    .icon {
-            font-size: 5rem; line-height: 5rem;
-            @media (max-width: $large) {font-size: 3.5rem;line-height: 3.5rem;}
-        }
-}
-
 .grid-rp-1 .box {
+    &.category, &.schedule, &.title-music {
+        .box-image {
+            img {
+                height: 100%;
+                @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
+                @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
+                @media (max-width: $max-tiny) {height: 145px;}
+            }
+            .icon {
+                font-size: 3.5rem;line-height: 3.5rem;
+            } 
+        }
+    }
     .box-image {
         img {
             height: 203px;
@@ -288,6 +287,10 @@
             @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
             @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
             @media (max-width: $max-tiny) {height: 145px;}
+        }
+        .icon {
+            font-size: 5rem; line-height: 5rem;
+            @media (max-width: $large) {font-size: 3.5rem;line-height: 3.5rem;}
         }
     }
 }
@@ -301,6 +304,10 @@
             @media (min-width: $tiny) and (max-width: $small) {height: 285px;}
             @media (min-width: $max-tiny) and (max-width: $tiny) {height: 225px;}
             @media (max-width: $max-tiny) {height: 145px;}
+        }
+        .icon {
+            font-size: 5rem; line-height: 5rem;
+            @media (max-width: $large) {font-size: 3.5rem;line-height: 3.5rem;}
         }
     }
 }

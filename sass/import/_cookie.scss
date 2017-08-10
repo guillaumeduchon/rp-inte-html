@@ -6,8 +6,8 @@
 	background-color: rgba(25, 25, 25, 0.9);
 	color: #efefef;
 	padding: 5px 20px;
-	font-size: 12px;
-	line-height: 1.2em;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 	text-align: center;
 	display: none;
 	z-index: 9999999;
@@ -43,7 +43,7 @@
 }
 
 .eupopup-closebutton {
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 100;
 	line-height: 1;
 	color: #a2a2a2;
@@ -77,13 +77,13 @@
 .eupopup-button_1 {
 	color: $brand-primary;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .eupopup-button_2 {
 	color: $brand-primary;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .eupopup-button {
