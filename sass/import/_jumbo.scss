@@ -112,7 +112,11 @@
             h1 {
                 &::after {content: none;}
             }
-            img {width: 130px; border-radius: 100%; margin-right: 20px; vertical-align: middle;}
+            img {width: 130px; border-radius: 100%; margin-right: 20px; vertical-align: middle;
+                @media (min-width: $small) and (max-width: $medium) {width: 90px;}
+                @media (min-width: $tiny) and (max-width: $small) {width: 70px;}
+                @media (max-width: $tiny) {display: none;}
+            }
         }
         h1 {
             margin: 0;
